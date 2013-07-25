@@ -1,0 +1,721 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<!-- Created with Jaspersoft Studio version last-->
+<jasperReport xmlns="http://jasperreports.sourceforge.net/jasperreports" xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance" xsi:schemaLocation="http://jasperreports.sourceforge.net/jasperreports http://jasperreports.sourceforge.net/xsd/jasperreport.xsd" name="Blank A4" language="groovy" pageWidth="595" pageHeight="842" columnWidth="555" leftMargin="20" rightMargin="20" topMargin="20" bottomMargin="20" uuid="aa83ff47-5607-43a5-96f2-3286d5894fa7">
+	<property name="com.jaspersoft.studio.data.defaultdataadapter" value="firstTry"/>
+	<style name="Table" mode="Opaque"/>
+	<style name="Table_TH" mode="Opaque" backcolor="#F0FCFF"/>
+	<style name="Table_CH" mode="Opaque" backcolor="#BFF3FF"/>
+	<style name="Table_TD" mode="Opaque" backcolor="#FFFFFF"/>
+	<style name="Table 1" mode="Opaque"/>
+	<style name="Table 1_TH" mode="Opaque" backcolor="#F0FCFF"/>
+	<style name="Table 1_CH" mode="Opaque" backcolor="#BFF3FF"/>
+	<style name="Table 1_TD" mode="Opaque" backcolor="#FFFFFF"/>
+	<subDataset name="assessment" uuid="2d4e7269-76b6-4296-a87f-626f824296cd">
+		<property name="com.jaspersoft.studio.data.defaultdataadapter" value="firstTry"/>
+		<parameter name="Class_Code" class="java.lang.Integer"/>
+		<queryString>
+			<![CDATA[SELECT * FROM assessment where CourseMainTable_Class_code=$P{Class_Code} group by CourseMainTable_Class_code;]]>
+		</queryString>
+		<field name="Assessment" class="java.lang.String">
+			<fieldDescription><![CDATA[]]></fieldDescription>
+		</field>
+		<field name="Duedate" class="java.lang.String">
+			<fieldDescription><![CDATA[]]></fieldDescription>
+		</field>
+		<field name="Remarks" class="java.lang.String">
+			<fieldDescription><![CDATA[]]></fieldDescription>
+		</field>
+		<field name="CourseMainTable_Class_code" class="java.lang.Integer">
+			<fieldDescription><![CDATA[]]></fieldDescription>
+		</field>
+	</subDataset>
+	<subDataset name="marksdistributing" uuid="6eeec7f0-b8eb-44a1-aa4f-c81e6cf7ec60">
+		<property name="com.jaspersoft.studio.data.defaultdataadapter" value="firstTry"/>
+		<parameter name="Class_Code" class="java.lang.Integer"/>
+		<queryString>
+			<![CDATA[SELECT * FROM iba.markdestribution where CourseMainTable_Class_code=$P{Class_Code};]]>
+		</queryString>
+		<field name="AssginemtTotalFrequency" class="java.lang.Integer">
+			<fieldDescription><![CDATA[]]></fieldDescription>
+		</field>
+		<field name="AssginemtTotalExempted" class="java.lang.Integer">
+			<fieldDescription><![CDATA[]]></fieldDescription>
+		</field>
+		<field name="AssginemtTotalMarksFrequency" class="java.lang.Integer">
+			<fieldDescription><![CDATA[]]></fieldDescription>
+		</field>
+		<field name="AssginemtTotalMarksHead" class="java.lang.Integer">
+			<fieldDescription><![CDATA[]]></fieldDescription>
+		</field>
+		<field name="AssginemtLearningOutcomes" class="java.lang.String">
+			<fieldDescription><![CDATA[]]></fieldDescription>
+		</field>
+		<field name="QuizTotalFrequency" class="java.lang.Integer">
+			<fieldDescription><![CDATA[]]></fieldDescription>
+		</field>
+		<field name="QuizTotalExempted" class="java.lang.Integer">
+			<fieldDescription><![CDATA[]]></fieldDescription>
+		</field>
+		<field name="QuizTotalMarksFrequency" class="java.lang.Integer">
+			<fieldDescription><![CDATA[]]></fieldDescription>
+		</field>
+		<field name="QuizTotalMarksHead" class="java.lang.Integer">
+			<fieldDescription><![CDATA[]]></fieldDescription>
+		</field>
+		<field name="QuizLearningOutcomes" class="java.lang.String">
+			<fieldDescription><![CDATA[]]></fieldDescription>
+		</field>
+		<field name="MidTermPaperTotalFrequency" class="java.lang.Integer">
+			<fieldDescription><![CDATA[]]></fieldDescription>
+		</field>
+		<field name="MidTermPaperTotalExempted" class="java.lang.Integer">
+			<fieldDescription><![CDATA[]]></fieldDescription>
+		</field>
+		<field name="MidTermPaperTotalMarksFrequency" class="java.lang.Integer">
+			<fieldDescription><![CDATA[]]></fieldDescription>
+		</field>
+		<field name="MidTermPaperTotalMarksHead" class="java.lang.Integer">
+			<fieldDescription><![CDATA[]]></fieldDescription>
+		</field>
+		<field name="MidTermPaperLearningOutcomes" class="java.lang.String">
+			<fieldDescription><![CDATA[]]></fieldDescription>
+		</field>
+		<field name="TermPaperTotalFrequency" class="java.lang.Integer">
+			<fieldDescription><![CDATA[]]></fieldDescription>
+		</field>
+		<field name="TermPaperTotalExempted" class="java.lang.Integer">
+			<fieldDescription><![CDATA[]]></fieldDescription>
+		</field>
+		<field name="TermPaperTotalMarksFrequency" class="java.lang.Integer">
+			<fieldDescription><![CDATA[]]></fieldDescription>
+		</field>
+		<field name="TermPaperTotalMarksHead" class="java.lang.Integer">
+			<fieldDescription><![CDATA[]]></fieldDescription>
+		</field>
+		<field name="TermPaperLearningOutcomes" class="java.lang.String">
+			<fieldDescription><![CDATA[]]></fieldDescription>
+		</field>
+		<field name="FinalPaperTotalFrequency" class="java.lang.Integer">
+			<fieldDescription><![CDATA[]]></fieldDescription>
+		</field>
+		<field name="FinalPaperTotalExempted" class="java.lang.Integer">
+			<fieldDescription><![CDATA[]]></fieldDescription>
+		</field>
+		<field name="FinalPaperTotalMarksFrequency" class="java.lang.Integer">
+			<fieldDescription><![CDATA[]]></fieldDescription>
+		</field>
+		<field name="FinalPaperTotalMarksHead" class="java.lang.Integer">
+			<fieldDescription><![CDATA[]]></fieldDescription>
+		</field>
+		<field name="FinalPaperLearningOutcomes" class="java.lang.String">
+			<fieldDescription><![CDATA[]]></fieldDescription>
+		</field>
+		<field name="TotalMarks" class="java.lang.Integer">
+			<fieldDescription><![CDATA[]]></fieldDescription>
+		</field>
+		<field name="TotalMarksLearningOutcomes" class="java.lang.String">
+			<fieldDescription><![CDATA[]]></fieldDescription>
+		</field>
+		<field name="CourseMainTable_Class_code" class="java.lang.Integer">
+			<fieldDescription><![CDATA[]]></fieldDescription>
+		</field>
+		<group name="CourseMainTable_Class_code">
+			<groupExpression><![CDATA[$F{CourseMainTable_Class_code}]]></groupExpression>
+		</group>
+	</subDataset>
+	<subDataset name="marksdis" uuid="be431666-5889-428a-9c50-448e279251bd">
+		<property name="com.jaspersoft.studio.data.defaultdataadapter" value="firstTry"/>
+		<parameter name="Class_Code" class="java.lang.Integer"/>
+		<queryString>
+			<![CDATA[SELECT * FROM iba.markdestribution where CourseMainTable_Class_code=$P{Class_Code};]]>
+		</queryString>
+		<field name="AssginemtTotalFrequency" class="java.lang.Integer">
+			<fieldDescription><![CDATA[]]></fieldDescription>
+		</field>
+		<field name="AssginemtTotalExempted" class="java.lang.Integer">
+			<fieldDescription><![CDATA[]]></fieldDescription>
+		</field>
+		<field name="AssginemtTotalMarksFrequency" class="java.lang.Integer">
+			<fieldDescription><![CDATA[]]></fieldDescription>
+		</field>
+		<field name="AssginemtTotalMarksHead" class="java.lang.Integer">
+			<fieldDescription><![CDATA[]]></fieldDescription>
+		</field>
+		<field name="AssginemtLearningOutcomes" class="java.lang.String">
+			<fieldDescription><![CDATA[]]></fieldDescription>
+		</field>
+		<field name="QuizTotalFrequency" class="java.lang.Integer">
+			<fieldDescription><![CDATA[]]></fieldDescription>
+		</field>
+		<field name="QuizTotalExempted" class="java.lang.Integer">
+			<fieldDescription><![CDATA[]]></fieldDescription>
+		</field>
+		<field name="QuizTotalMarksFrequency" class="java.lang.Integer">
+			<fieldDescription><![CDATA[]]></fieldDescription>
+		</field>
+		<field name="QuizTotalMarksHead" class="java.lang.Integer">
+			<fieldDescription><![CDATA[]]></fieldDescription>
+		</field>
+		<field name="QuizLearningOutcomes" class="java.lang.String">
+			<fieldDescription><![CDATA[]]></fieldDescription>
+		</field>
+		<field name="MidTermPaperTotalFrequency" class="java.lang.Integer">
+			<fieldDescription><![CDATA[]]></fieldDescription>
+		</field>
+		<field name="MidTermPaperTotalExempted" class="java.lang.Integer">
+			<fieldDescription><![CDATA[]]></fieldDescription>
+		</field>
+		<field name="MidTermPaperTotalMarksFrequency" class="java.lang.Integer">
+			<fieldDescription><![CDATA[]]></fieldDescription>
+		</field>
+		<field name="MidTermPaperTotalMarksHead" class="java.lang.Integer">
+			<fieldDescription><![CDATA[]]></fieldDescription>
+		</field>
+		<field name="MidTermPaperLearningOutcomes" class="java.lang.String">
+			<fieldDescription><![CDATA[]]></fieldDescription>
+		</field>
+		<field name="TermPaperTotalFrequency" class="java.lang.Integer">
+			<fieldDescription><![CDATA[]]></fieldDescription>
+		</field>
+		<field name="TermPaperTotalExempted" class="java.lang.Integer">
+			<fieldDescription><![CDATA[]]></fieldDescription>
+		</field>
+		<field name="TermPaperTotalMarksFrequency" class="java.lang.Integer">
+			<fieldDescription><![CDATA[]]></fieldDescription>
+		</field>
+		<field name="TermPaperTotalMarksHead" class="java.lang.Integer">
+			<fieldDescription><![CDATA[]]></fieldDescription>
+		</field>
+		<field name="TermPaperLearningOutcomes" class="java.lang.String">
+			<fieldDescription><![CDATA[]]></fieldDescription>
+		</field>
+		<field name="FinalPaperTotalFrequency" class="java.lang.Integer">
+			<fieldDescription><![CDATA[]]></fieldDescription>
+		</field>
+		<field name="FinalPaperTotalExempted" class="java.lang.Integer">
+			<fieldDescription><![CDATA[]]></fieldDescription>
+		</field>
+		<field name="FinalPaperTotalMarksFrequency" class="java.lang.Integer">
+			<fieldDescription><![CDATA[]]></fieldDescription>
+		</field>
+		<field name="FinalPaperTotalMarksHead" class="java.lang.Integer">
+			<fieldDescription><![CDATA[]]></fieldDescription>
+		</field>
+		<field name="FinalPaperLearningOutcomes" class="java.lang.String">
+			<fieldDescription><![CDATA[]]></fieldDescription>
+		</field>
+		<field name="TotalMarks" class="java.lang.Integer">
+			<fieldDescription><![CDATA[]]></fieldDescription>
+		</field>
+		<field name="TotalMarksLearningOutcomes" class="java.lang.String">
+			<fieldDescription><![CDATA[]]></fieldDescription>
+		</field>
+		<field name="CourseMainTable_Class_code" class="java.lang.Integer">
+			<fieldDescription><![CDATA[]]></fieldDescription>
+		</field>
+		<field name="Marks Head" class="java.lang.String">
+			<fieldDescription><![CDATA[]]></fieldDescription>
+		</field>
+		<field name="TotalFrequency" class="java.lang.String">
+			<fieldDescription><![CDATA[]]></fieldDescription>
+		</field>
+		<field name="TotalExempted" class="java.lang.String">
+			<fieldDescription><![CDATA[]]></fieldDescription>
+		</field>
+		<field name="TotalMarksFrequency" class="java.lang.String">
+			<fieldDescription><![CDATA[]]></fieldDescription>
+		</field>
+		<field name="TotalMarksHead" class="java.lang.String">
+			<fieldDescription><![CDATA[]]></fieldDescription>
+		</field>
+		<field name="LearningOutcomes" class="java.lang.String">
+			<fieldDescription><![CDATA[]]></fieldDescription>
+		</field>
+		<field name="Assignment" class="java.lang.String">
+			<fieldDescription><![CDATA[]]></fieldDescription>
+		</field>
+		<field name="Quiz" class="java.lang.String">
+			<fieldDescription><![CDATA[]]></fieldDescription>
+		</field>
+		<field name="MidTermPaper" class="java.lang.String">
+			<fieldDescription><![CDATA[]]></fieldDescription>
+		</field>
+		<field name="TermProject" class="java.lang.String">
+			<fieldDescription><![CDATA[]]></fieldDescription>
+		</field>
+		<field name="FinalPaper" class="java.lang.String">
+			<fieldDescription><![CDATA[]]></fieldDescription>
+		</field>
+		<group name="CourseMainTable_Class_code">
+			<groupExpression><![CDATA[$F{CourseMainTable_Class_code}]]></groupExpression>
+		</group>
+	</subDataset>
+	<subDataset name="Dataset1" uuid="204d1910-99cd-4704-b143-edc035142a62">
+		<property name="com.jaspersoft.studio.data.defaultdataadapter" value="firstTry"/>
+		<parameter name="Class_Code" class="java.lang.Integer"/>
+		<queryString>
+			<![CDATA[SELECT * FROM iba.markdestribution where CourseMainTable_Class_code=$P{Class_Code};]]>
+		</queryString>
+		<field name="AssginemtTotalFrequency" class="java.lang.Integer">
+			<fieldDescription><![CDATA[]]></fieldDescription>
+		</field>
+		<field name="AssginemtTotalExempted" class="java.lang.Integer">
+			<fieldDescription><![CDATA[]]></fieldDescription>
+		</field>
+		<field name="AssginemtTotalMarksFrequency" class="java.lang.Integer">
+			<fieldDescription><![CDATA[]]></fieldDescription>
+		</field>
+		<field name="AssginemtTotalMarksHead" class="java.lang.Integer">
+			<fieldDescription><![CDATA[]]></fieldDescription>
+		</field>
+		<field name="AssginemtLearningOutcomes" class="java.lang.String">
+			<fieldDescription><![CDATA[]]></fieldDescription>
+		</field>
+		<field name="QuizTotalFrequency" class="java.lang.Integer">
+			<fieldDescription><![CDATA[]]></fieldDescription>
+		</field>
+		<field name="QuizTotalExempted" class="java.lang.Integer">
+			<fieldDescription><![CDATA[]]></fieldDescription>
+		</field>
+		<field name="QuizTotalMarksFrequency" class="java.lang.Integer">
+			<fieldDescription><![CDATA[]]></fieldDescription>
+		</field>
+		<field name="QuizTotalMarksHead" class="java.lang.Integer">
+			<fieldDescription><![CDATA[]]></fieldDescription>
+		</field>
+		<field name="QuizLearningOutcomes" class="java.lang.String">
+			<fieldDescription><![CDATA[]]></fieldDescription>
+		</field>
+		<field name="MidTermPaperTotalFrequency" class="java.lang.Integer">
+			<fieldDescription><![CDATA[]]></fieldDescription>
+		</field>
+		<field name="MidTermPaperTotalExempted" class="java.lang.Integer">
+			<fieldDescription><![CDATA[]]></fieldDescription>
+		</field>
+		<field name="MidTermPaperTotalMarksFrequency" class="java.lang.Integer">
+			<fieldDescription><![CDATA[]]></fieldDescription>
+		</field>
+		<field name="MidTermPaperTotalMarksHead" class="java.lang.Integer">
+			<fieldDescription><![CDATA[]]></fieldDescription>
+		</field>
+		<field name="MidTermPaperLearningOutcomes" class="java.lang.String">
+			<fieldDescription><![CDATA[]]></fieldDescription>
+		</field>
+		<field name="TermPaperTotalFrequency" class="java.lang.Integer">
+			<fieldDescription><![CDATA[]]></fieldDescription>
+		</field>
+		<field name="TermPaperTotalExempted" class="java.lang.Integer">
+			<fieldDescription><![CDATA[]]></fieldDescription>
+		</field>
+		<field name="TermPaperTotalMarksFrequency" class="java.lang.Integer">
+			<fieldDescription><![CDATA[]]></fieldDescription>
+		</field>
+		<field name="TermPaperTotalMarksHead" class="java.lang.Integer">
+			<fieldDescription><![CDATA[]]></fieldDescription>
+		</field>
+		<field name="TermPaperLearningOutcomes" class="java.lang.String">
+			<fieldDescription><![CDATA[]]></fieldDescription>
+		</field>
+		<field name="FinalPaperTotalFrequency" class="java.lang.Integer">
+			<fieldDescription><![CDATA[]]></fieldDescription>
+		</field>
+		<field name="FinalPaperTotalExempted" class="java.lang.Integer">
+			<fieldDescription><![CDATA[]]></fieldDescription>
+		</field>
+		<field name="FinalPaperTotalMarksFrequency" class="java.lang.Integer">
+			<fieldDescription><![CDATA[]]></fieldDescription>
+		</field>
+		<field name="FinalPaperTotalMarksHead" class="java.lang.Integer">
+			<fieldDescription><![CDATA[]]></fieldDescription>
+		</field>
+		<field name="FinalPaperLearningOutcomes" class="java.lang.String">
+			<fieldDescription><![CDATA[]]></fieldDescription>
+		</field>
+		<field name="TotalMarks" class="java.lang.Integer">
+			<fieldDescription><![CDATA[]]></fieldDescription>
+		</field>
+		<field name="TotalMarksLearningOutcomes" class="java.lang.String">
+			<fieldDescription><![CDATA[]]></fieldDescription>
+		</field>
+		<field name="CourseMainTable_Class_code" class="java.lang.Integer">
+			<fieldDescription><![CDATA[]]></fieldDescription>
+		</field>
+		<group name="CourseMainTable_Class_code">
+			<groupExpression><![CDATA[$F{CourseMainTable_Class_code}]]></groupExpression>
+		</group>
+	</subDataset>
+	<parameter name="Class_Code" class="java.lang.Integer"/>
+	<queryString>
+		<![CDATA[select marks.*,other.TextBookAndPreCourseReading,other.PrerequisiteSkilleAndKnowledge from iba.coursemaintable AS Main,markdestribution as marks, iba.courseothertable as other where Main.Class_code=$P{Class_Code} and Main.Class_code=other.CourseMainTable_Class_code group by Main.Class_code;]]>
+	</queryString>
+	<field name="TextBookAndPreCourseReading" class="java.lang.String">
+		<fieldDescription><![CDATA[]]></fieldDescription>
+	</field>
+	<field name="PrerequisiteSkilleAndKnowledge" class="java.lang.String">
+		<fieldDescription><![CDATA[]]></fieldDescription>
+	</field>
+	<field name="AssginemtTotalFrequency" class="java.lang.Integer">
+		<fieldDescription><![CDATA[]]></fieldDescription>
+	</field>
+	<field name="AssginemtTotalExempted" class="java.lang.Integer">
+		<fieldDescription><![CDATA[]]></fieldDescription>
+	</field>
+	<field name="AssginemtTotalMarksFrequency" class="java.lang.Integer">
+		<fieldDescription><![CDATA[]]></fieldDescription>
+	</field>
+	<field name="AssginemtTotalMarksHead" class="java.lang.Integer">
+		<fieldDescription><![CDATA[]]></fieldDescription>
+	</field>
+	<field name="AssginemtLearningOutcomes" class="java.lang.String">
+		<fieldDescription><![CDATA[]]></fieldDescription>
+	</field>
+	<field name="QuizTotalFrequency" class="java.lang.Integer">
+		<fieldDescription><![CDATA[]]></fieldDescription>
+	</field>
+	<field name="QuizTotalExempted" class="java.lang.Integer">
+		<fieldDescription><![CDATA[]]></fieldDescription>
+	</field>
+	<field name="QuizTotalMarksFrequency" class="java.lang.Integer">
+		<fieldDescription><![CDATA[]]></fieldDescription>
+	</field>
+	<field name="QuizTotalMarksHead" class="java.lang.Integer">
+		<fieldDescription><![CDATA[]]></fieldDescription>
+	</field>
+	<field name="QuizLearningOutcomes" class="java.lang.String">
+		<fieldDescription><![CDATA[]]></fieldDescription>
+	</field>
+	<field name="MidTermPaperTotalFrequency" class="java.lang.Integer">
+		<fieldDescription><![CDATA[]]></fieldDescription>
+	</field>
+	<field name="MidTermPaperTotalExempted" class="java.lang.Integer">
+		<fieldDescription><![CDATA[]]></fieldDescription>
+	</field>
+	<field name="MidTermPaperTotalMarksFrequency" class="java.lang.Integer">
+		<fieldDescription><![CDATA[]]></fieldDescription>
+	</field>
+	<field name="MidTermPaperTotalMarksHead" class="java.lang.Integer">
+		<fieldDescription><![CDATA[]]></fieldDescription>
+	</field>
+	<field name="MidTermPaperLearningOutcomes" class="java.lang.String">
+		<fieldDescription><![CDATA[]]></fieldDescription>
+	</field>
+	<field name="TermPaperTotalFrequency" class="java.lang.Integer">
+		<fieldDescription><![CDATA[]]></fieldDescription>
+	</field>
+	<field name="TermPaperTotalExempted" class="java.lang.Integer">
+		<fieldDescription><![CDATA[]]></fieldDescription>
+	</field>
+	<field name="TermPaperTotalMarksFrequency" class="java.lang.Integer">
+		<fieldDescription><![CDATA[]]></fieldDescription>
+	</field>
+	<field name="TermPaperTotalMarksHead" class="java.lang.Integer">
+		<fieldDescription><![CDATA[]]></fieldDescription>
+	</field>
+	<field name="TermPaperLearningOutcomes" class="java.lang.String">
+		<fieldDescription><![CDATA[]]></fieldDescription>
+	</field>
+	<field name="FinalPaperTotalFrequency" class="java.lang.Integer">
+		<fieldDescription><![CDATA[]]></fieldDescription>
+	</field>
+	<field name="FinalPaperTotalExempted" class="java.lang.Integer">
+		<fieldDescription><![CDATA[]]></fieldDescription>
+	</field>
+	<field name="FinalPaperTotalMarksFrequency" class="java.lang.Integer">
+		<fieldDescription><![CDATA[]]></fieldDescription>
+	</field>
+	<field name="FinalPaperTotalMarksHead" class="java.lang.Integer">
+		<fieldDescription><![CDATA[]]></fieldDescription>
+	</field>
+	<field name="FinalPaperLearningOutcomes" class="java.lang.String">
+		<fieldDescription><![CDATA[]]></fieldDescription>
+	</field>
+	<field name="TotalMarks" class="java.lang.Integer">
+		<fieldDescription><![CDATA[]]></fieldDescription>
+	</field>
+	<field name="TotalMarksLearningOutcomes" class="java.lang.String">
+		<fieldDescription><![CDATA[]]></fieldDescription>
+	</field>
+	<field name="CourseMainTable_Class_code" class="java.lang.Integer">
+		<fieldDescription><![CDATA[]]></fieldDescription>
+	</field>
+	<background>
+		<band splitType="Stretch"/>
+	</background>
+	<title>
+		<band height="90" splitType="Stretch">
+			<staticText>
+				<reportElement uuid="d6c80bea-9a56-46e2-aa07-6e6c37999dc1" x="0" y="0" width="554" height="20"/>
+				<textElement textAlignment="Center" verticalAlignment="Middle">
+					<font size="14" isBold="true"/>
+				</textElement>
+				<text><![CDATA[Text Book and Pre course Reading Material and Videos]]></text>
+			</staticText>
+			<textField>
+				<reportElement uuid="e7de1fa3-b8d6-41a7-b03f-65ecba6b1c49" x="0" y="20" width="555" height="20"/>
+				<textElement/>
+				<textFieldExpression><![CDATA[$F{TextBookAndPreCourseReading}]]></textFieldExpression>
+			</textField>
+			<staticText>
+				<reportElement uuid="c372ff6c-f150-4180-bf1e-bacf6a7a65ee" x="0" y="70" width="554" height="20"/>
+				<textElement textAlignment="Center" verticalAlignment="Middle">
+					<font size="14" isBold="true"/>
+				</textElement>
+				<text><![CDATA[Prerequisite Skills and Knowledge to take this course]]></text>
+			</staticText>
+		</band>
+	</title>
+	<detail>
+		<band height="370" splitType="Stretch">
+			<frame>
+				<reportElement uuid="d3f20b8c-7e58-47da-b630-d645bec9576d" x="10" y="110" width="531" height="170"/>
+			</frame>
+			<textField>
+				<reportElement uuid="a44d4e92-09fa-4891-b9f2-8c66db2a826f" x="370" y="180" width="76" height="20"/>
+				<textElement/>
+				<textFieldExpression><![CDATA[$F{QuizTotalMarksHead}]]></textFieldExpression>
+			</textField>
+			<textField>
+				<reportElement uuid="4c8ad220-af16-4ee7-b8be-d83fe329d968" x="190" y="180" width="66" height="20"/>
+				<textElement/>
+				<textFieldExpression><![CDATA[$F{QuizTotalExempted}]]></textFieldExpression>
+			</textField>
+			<textField>
+				<reportElement uuid="7bc449bb-837e-4394-b03b-c3d6a5e8cae9" x="370" y="200" width="76" height="20"/>
+				<textElement/>
+				<textFieldExpression><![CDATA[$F{MidTermPaperTotalMarksHead}]]></textFieldExpression>
+			</textField>
+			<staticText>
+				<reportElement uuid="e8600db8-6e01-4816-a37f-5427042f9ce8" x="10" y="220" width="66" height="20"/>
+				<textElement textAlignment="Center">
+					<font size="11"/>
+				</textElement>
+				<text><![CDATA[Term Project]]></text>
+			</staticText>
+			<textField>
+				<reportElement uuid="afd0e0aa-4d25-4094-9abd-abfb3345c3c7" x="470" y="220" width="70" height="20"/>
+				<textElement/>
+				<textFieldExpression><![CDATA[$F{TermPaperLearningOutcomes}]]></textFieldExpression>
+			</textField>
+			<textField>
+				<reportElement uuid="d4da6965-f91d-45ea-b97b-6051749da0ee" x="280" y="160" width="66" height="20"/>
+				<textElement/>
+				<textFieldExpression><![CDATA[$F{AssginemtTotalMarksFrequency}]]></textFieldExpression>
+			</textField>
+			<textField>
+				<reportElement uuid="d4ec293b-d78e-44e1-8ca8-0b09fb80fc4a" x="470" y="240" width="70" height="20"/>
+				<textElement/>
+				<textFieldExpression><![CDATA[$F{FinalPaperLearningOutcomes}]]></textFieldExpression>
+			</textField>
+			<staticText>
+				<reportElement uuid="22b55644-70ab-4152-a703-fae57b5d3998" x="280" y="130" width="66" height="30"/>
+				<textElement textAlignment="Center" verticalAlignment="Middle">
+					<font size="11"/>
+				</textElement>
+				<text><![CDATA[Marks
+/Frequency
+
+
+]]></text>
+			</staticText>
+			<staticText>
+				<reportElement uuid="10e9f489-7fa0-4009-b11e-ec0a46783870" x="10" y="200" width="66" height="20"/>
+				<textElement textAlignment="Center">
+					<font size="11"/>
+				</textElement>
+				<text><![CDATA[Mid Term Project]]></text>
+			</staticText>
+			<textField>
+				<reportElement uuid="f87e4e64-8947-4c28-8f5e-56a729f3d3cf" x="190" y="200" width="66" height="20"/>
+				<textElement/>
+				<textFieldExpression><![CDATA[$F{MidTermPaperTotalExempted}]]></textFieldExpression>
+			</textField>
+			<textField>
+				<reportElement uuid="b4ad8508-1bc6-4651-8bd3-ef8771d19780" x="470" y="180" width="70" height="20"/>
+				<textElement/>
+				<textFieldExpression><![CDATA[$F{QuizLearningOutcomes}]]></textFieldExpression>
+			</textField>
+			<staticText>
+				<reportElement uuid="5448dc66-5a74-4e0d-a648-67154a20eb2c" x="10" y="160" width="66" height="20"/>
+				<textElement textAlignment="Center">
+					<font size="11"/>
+				</textElement>
+				<text><![CDATA[Assignment]]></text>
+			</staticText>
+			<staticText>
+				<reportElement uuid="0b816ea6-2d3f-4417-bd9a-538287f6b863" x="10" y="240" width="66" height="20"/>
+				<textElement textAlignment="Center">
+					<font size="11"/>
+				</textElement>
+				<text><![CDATA[Final Paper]]></text>
+			</staticText>
+			<textField>
+				<reportElement uuid="72354c65-dea4-405d-bd49-64c0933e364c" x="100" y="200" width="66" height="20"/>
+				<textElement/>
+				<textFieldExpression><![CDATA[$F{MidTermPaperTotalFrequency}]]></textFieldExpression>
+			</textField>
+			<textField>
+				<reportElement uuid="2b605cbd-d53a-49a8-bedf-530ed164d4dd" x="190" y="160" width="66" height="20"/>
+				<textElement/>
+				<textFieldExpression><![CDATA[$F{AssginemtTotalExempted}]]></textFieldExpression>
+			</textField>
+			<textField>
+				<reportElement uuid="7b48244c-3358-4b74-8cde-be4e5693d49b" x="280" y="200" width="66" height="20"/>
+				<textElement/>
+				<textFieldExpression><![CDATA[$F{MidTermPaperTotalMarksFrequency}]]></textFieldExpression>
+			</textField>
+			<textField>
+				<reportElement uuid="ea1fae4a-eff0-4267-965c-01de9dc713ff" x="370" y="240" width="76" height="20"/>
+				<textElement/>
+				<textFieldExpression><![CDATA[$F{FinalPaperTotalMarksHead}]]></textFieldExpression>
+			</textField>
+			<textField>
+				<reportElement uuid="6788fcee-0ecc-43e1-953b-0eff1b4261cc" x="470" y="160" width="70" height="20"/>
+				<textElement/>
+				<textFieldExpression><![CDATA[$F{AssginemtLearningOutcomes}]]></textFieldExpression>
+			</textField>
+			<staticText>
+				<reportElement uuid="c6a462b6-05f5-4c37-93e7-cf57a96d7917" x="100" y="130" width="66" height="30"/>
+				<textElement textAlignment="Center" verticalAlignment="Middle">
+					<font size="11"/>
+				</textElement>
+				<text><![CDATA[Total 
+Frequency]]></text>
+			</staticText>
+			<textField>
+				<reportElement uuid="5a90f95c-f58c-4858-9a29-6c1545adcbcc" x="370" y="160" width="76" height="20"/>
+				<textElement/>
+				<textFieldExpression><![CDATA[$F{AssginemtTotalMarksHead}]]></textFieldExpression>
+			</textField>
+			<staticText>
+				<reportElement uuid="16ce6304-47d0-460e-bcd0-7bf1a4b0125b" x="10" y="180" width="66" height="20"/>
+				<textElement textAlignment="Center">
+					<font size="11"/>
+				</textElement>
+				<text><![CDATA[Quiz]]></text>
+			</staticText>
+			<staticText>
+				<reportElement uuid="7933b959-cad6-43ce-8178-5488409fef5d" x="370" y="130" width="76" height="30"/>
+				<textElement textAlignment="Center" verticalAlignment="Middle">
+					<font size="11"/>
+				</textElement>
+				<text><![CDATA[Total Marks
+/Head]]></text>
+			</staticText>
+			<textField>
+				<reportElement uuid="c61ab5cf-3309-4539-bd2a-4a319a3df417" x="280" y="220" width="66" height="20"/>
+				<textElement/>
+				<textFieldExpression><![CDATA[$F{TermPaperTotalMarksFrequency}]]></textFieldExpression>
+			</textField>
+			<textField>
+				<reportElement uuid="01c5e61c-952b-45a0-8991-0aa042f2cb54" x="190" y="240" width="66" height="20"/>
+				<textElement/>
+				<textFieldExpression><![CDATA[$F{FinalPaperTotalExempted}]]></textFieldExpression>
+			</textField>
+			<textField>
+				<reportElement uuid="7dfea7de-7246-41c2-93e6-7780cbd4eb9c" x="100" y="180" width="66" height="20"/>
+				<textElement/>
+				<textFieldExpression><![CDATA[$F{QuizTotalFrequency}]]></textFieldExpression>
+			</textField>
+			<textField>
+				<reportElement uuid="303989a6-ee46-4dbc-8f60-a039df988db8" x="100" y="220" width="66" height="20"/>
+				<textElement/>
+				<textFieldExpression><![CDATA[$F{TermPaperTotalFrequency}]]></textFieldExpression>
+			</textField>
+			<textField>
+				<reportElement uuid="fba8a249-6302-4ede-b66c-dfb695d69f38" x="370" y="220" width="76" height="20"/>
+				<textElement/>
+				<textFieldExpression><![CDATA[$F{TermPaperTotalMarksHead}]]></textFieldExpression>
+			</textField>
+			<staticText>
+				<reportElement uuid="c33bc6fa-b750-4323-8602-3989dc411930" x="470" y="130" width="70" height="30"/>
+				<textElement textAlignment="Center" verticalAlignment="Middle">
+					<font size="11"/>
+				</textElement>
+				<text><![CDATA[Learning Outcomes]]></text>
+			</staticText>
+			<textField>
+				<reportElement uuid="5c0d6332-df5d-4574-9939-e70c2f1d43db" x="280" y="240" width="66" height="20"/>
+				<textElement/>
+				<textFieldExpression><![CDATA[$F{FinalPaperTotalMarksFrequency}]]></textFieldExpression>
+			</textField>
+			<staticText>
+				<reportElement uuid="2c56846c-7c5d-4ea0-a840-85baa55916ea" x="10" y="130" width="66" height="30"/>
+				<textElement textAlignment="Center" verticalAlignment="Middle">
+					<font size="11"/>
+				</textElement>
+				<text><![CDATA[Marks Head]]></text>
+			</staticText>
+			<textField>
+				<reportElement uuid="4eb5defe-68d8-41d9-a91f-5da30323f8e8" x="470" y="200" width="70" height="20"/>
+				<textElement/>
+				<textFieldExpression><![CDATA[$F{MidTermPaperLearningOutcomes}]]></textFieldExpression>
+			</textField>
+			<textField>
+				<reportElement uuid="149f5ff3-13ec-4167-8f16-d98acbe2d612" x="280" y="180" width="66" height="20"/>
+				<textElement/>
+				<textFieldExpression><![CDATA[$F{QuizTotalMarksFrequency}]]></textFieldExpression>
+			</textField>
+			<staticText>
+				<reportElement uuid="0b2af697-97f8-4e50-9b78-c075bf1605f9" x="190" y="130" width="66" height="30"/>
+				<textElement textAlignment="Center" verticalAlignment="Middle">
+					<font size="11"/>
+				</textElement>
+				<text><![CDATA[Total 
+Exempted]]></text>
+			</staticText>
+			<textField>
+				<reportElement uuid="947ea678-dbc2-4166-aace-8eac1174ee2c" x="100" y="240" width="66" height="20"/>
+				<textElement/>
+				<textFieldExpression><![CDATA[$F{FinalPaperTotalFrequency}]]></textFieldExpression>
+			</textField>
+			<textField>
+				<reportElement uuid="b8a8341d-8e1b-4ae1-be4d-f15ecb77fe27" x="100" y="160" width="66" height="20"/>
+				<textElement/>
+				<textFieldExpression><![CDATA[$F{AssginemtTotalFrequency}]]></textFieldExpression>
+			</textField>
+			<textField>
+				<reportElement uuid="5aea14cc-7515-4a5f-a6bd-7ea0b3b27692" x="190" y="220" width="66" height="20"/>
+				<textElement/>
+				<textFieldExpression><![CDATA[$F{TermPaperTotalExempted}]]></textFieldExpression>
+			</textField>
+			<staticText>
+				<reportElement uuid="1d2b9571-f519-411f-8fa7-ed0ae7c00155" x="10" y="110" width="530" height="20"/>
+				<textElement textAlignment="Center" verticalAlignment="Middle">
+					<font size="14" isBold="true"/>
+				</textElement>
+				<text><![CDATA[Marks Distribution]]></text>
+			</staticText>
+			<textField>
+				<reportElement uuid="87b4d07a-bf47-4f35-90b3-b6f1f129c158" x="0" y="8" width="555" height="20"/>
+				<textElement/>
+				<textFieldExpression><![CDATA[$F{PrerequisiteSkilleAndKnowledge}]]></textFieldExpression>
+			</textField>
+			<textField>
+				<reportElement uuid="ebb45ec3-7797-43c6-b58a-c82109bc6725" x="470" y="260" width="70" height="20"/>
+				<textElement/>
+				<textFieldExpression><![CDATA[$F{TotalMarksLearningOutcomes}]]></textFieldExpression>
+			</textField>
+			<textField>
+				<reportElement uuid="51158bba-c621-4ab0-8aeb-5c489f4afb13" x="370" y="260" width="76" height="20"/>
+				<textElement/>
+				<textFieldExpression><![CDATA[$F{TotalMarks}]]></textFieldExpression>
+			</textField>
+			<staticText>
+				<reportElement uuid="a6c37d16-a4ac-43a1-95e0-96936a4354af" x="10" y="260" width="336" height="20"/>
+				<textElement textAlignment="Center">
+					<font size="11"/>
+				</textElement>
+				<text><![CDATA[Total Marks]]></text>
+			</staticText>
+		</band>
+	</detail>
+	<columnFooter>
+		<band height="45" splitType="Stretch"/>
+	</columnFooter>
+	<pageFooter>
+		<band height="54" splitType="Stretch"/>
+	</pageFooter>
+	<summary>
+		<band height="42" splitType="Stretch"/>
+	</summary>
+</jasperReport>

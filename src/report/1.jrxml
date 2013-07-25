@@ -1,0 +1,68 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<!-- Created with Jaspersoft Studio version last-->
+<jasperReport xmlns="http://jasperreports.sourceforge.net/jasperreports" xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance" xsi:schemaLocation="http://jasperreports.sourceforge.net/jasperreports http://jasperreports.sourceforge.net/xsd/jasperreport.xsd" name="Blank A4" language="groovy" pageWidth="595" pageHeight="842" columnWidth="555" leftMargin="20" rightMargin="20" topMargin="20" bottomMargin="20" uuid="d79316e1-ebca-4f93-9c72-f8c9efa2ba2f">
+	<property name="com.jaspersoft.studio.data.defaultdataadapter" value="firstTry"/>
+	<property name="ireport.callouts" value="callouts.1.fg=0,0,0
+
+callouts.1.bg=255,255,0
+
+"/>
+	<queryString>
+		<![CDATA[]]>
+	</queryString>
+	<background>
+		<band splitType="Stretch"/>
+	</background>
+	<title>
+		<band height="36" splitType="Stretch">
+			<textField>
+				<reportElement uuid="0a281bc5-f249-4ba5-9e99-5b31048d7d90" x="173" y="6" width="70" height="30"/>
+				<textElement/>
+				<textFieldExpression><![CDATA["Text Field"]]></textFieldExpression>
+			</textField>
+		</band>
+	</title>
+	<detail>
+		<band height="410" splitType="Stretch">
+			<staticText>
+				<reportElement uuid="1705cff4-22a2-40d3-8803-4719a9d69b48" x="0" y="0" width="554" height="410"/>
+				<textElement>
+					<font size="12"/>
+				</textElement>
+				<text><![CDATA[The Document includes:
+•	Mission Statement – MBA Program 
+
+•	MBA Program Objectives 
+
+•	MBA Program Outcomes
+
+•	Program Objectives and Outcomes Matrix
+
+•	MBA Sample Course Outline 
+
+o	Course Description
+o	Course Objective 
+o	Course Learning Outcomes
+o	Teaching Methodology
+o	MBA Program Outcomes and Course Outcome Matrix
+o	Course Plan
+o	Text and reference Books
+o	Marks Distribution
+o	Technology Requirements
+o	Academic Conduct 
+o	Attendance Policy
+o	Plagiarism Policy
+o	Withdrawal Policy]]></text>
+			</staticText>
+		</band>
+	</detail>
+	<columnFooter>
+		<band height="45" splitType="Stretch"/>
+	</columnFooter>
+	<pageFooter>
+		<band height="54" splitType="Stretch"/>
+	</pageFooter>
+	<summary>
+		<band height="42" splitType="Stretch"/>
+	</summary>
+</jasperReport>

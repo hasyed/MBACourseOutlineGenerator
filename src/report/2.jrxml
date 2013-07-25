@@ -1,0 +1,45 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<!-- Created with Jaspersoft Studio version last-->
+<jasperReport xmlns="http://jasperreports.sourceforge.net/jasperreports" xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance" xsi:schemaLocation="http://jasperreports.sourceforge.net/jasperreports http://jasperreports.sourceforge.net/xsd/jasperreport.xsd" name="Blank A4" language="groovy" pageWidth="595" pageHeight="842" columnWidth="555" leftMargin="20" rightMargin="20" topMargin="20" bottomMargin="20" uuid="44223ffe-0bfe-42e2-99fd-d6e4ade2f7d1">
+	<property name="com.jaspersoft.studio.data.defaultdataadapter" value="firstTry"/>
+	<queryString>
+		<![CDATA[SELECT * FROM iba.mbaprogrammissionstatement;]]>
+	</queryString>
+	<field name="Text" class="java.lang.String">
+		<fieldDescription><![CDATA[]]></fieldDescription>
+	</field>
+	<background>
+		<band splitType="Stretch"/>
+	</background>
+	<title>
+		<band height="46" splitType="Stretch">
+			<staticText>
+				<reportElement uuid="ec53c17c-bc3c-47b8-ba61-9dee7ebfe437" x="80" y="10" width="400" height="30"/>
+				<textElement textAlignment="Center">
+					<font size="16" isBold="true"/>
+				</textElement>
+				<text><![CDATA[MBA Program Objectives]]></text>
+			</staticText>
+		</band>
+	</title>
+	<detail>
+		<band height="200" splitType="Stretch">
+			<textField>
+				<reportElement uuid="18ec4833-f6ec-4e5f-83d4-d88206eb2d8b" x="80" y="0" width="400" height="200"/>
+				<textElement>
+					<font size="12"/>
+				</textElement>
+				<textFieldExpression><![CDATA[$F{Text}]]></textFieldExpression>
+			</textField>
+		</band>
+	</detail>
+	<columnFooter>
+		<band height="45" splitType="Stretch"/>
+	</columnFooter>
+	<pageFooter>
+		<band height="54" splitType="Stretch"/>
+	</pageFooter>
+	<summary>
+		<band height="42" splitType="Stretch"/>
+	</summary>
+</jasperReport>

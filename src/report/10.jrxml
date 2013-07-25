@@ -1,0 +1,114 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<!-- Created with Jaspersoft Studio version last-->
+<jasperReport xmlns="http://jasperreports.sourceforge.net/jasperreports" xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance" xsi:schemaLocation="http://jasperreports.sourceforge.net/jasperreports http://jasperreports.sourceforge.net/xsd/jasperreport.xsd" name="Blank A4" language="groovy" pageWidth="595" pageHeight="842" columnWidth="555" leftMargin="20" rightMargin="20" topMargin="20" bottomMargin="20" uuid="2820fa07-6429-4240-9e07-2b52ee3f6f00">
+	<property name="com.jaspersoft.studio.data.defaultdataadapter" value="firstTry"/>
+	<style name="Table" mode="Opaque"/>
+	<style name="Table_TH" mode="Opaque" backcolor="#F0FCFF"/>
+	<style name="Table_CH" mode="Opaque" backcolor="#BFF3FF"/>
+	<style name="Table_TD" mode="Opaque" backcolor="#FFFFFF"/>
+	<subDataset name="Dataset1" uuid="5a29fced-046b-420d-9c85-f29f426c5e53">
+		<property name="com.jaspersoft.studio.data.defaultdataadapter" value="firstTry"/>
+		<queryString>
+			<![CDATA[SELECT a.RowID, a.Assessment,a.Duedate,a.Remarks FROM assessment AS a where a.CourseMainTable_Class_code=234;]]>
+		</queryString>
+		<field name="Assessment" class="java.lang.String">
+			<fieldDescription><![CDATA[]]></fieldDescription>
+		</field>
+		<field name="Duedate" class="java.lang.String">
+			<fieldDescription><![CDATA[]]></fieldDescription>
+		</field>
+		<field name="Remarks" class="java.lang.String">
+			<fieldDescription><![CDATA[]]></fieldDescription>
+		</field>
+	</subDataset>
+	<parameter name="Class_Code" class="java.lang.Integer"/>
+	<queryString>
+		<![CDATA[SELECT a.RowID, a.Assessment,a.Duedate,a.Remarks FROM assessment AS a where a.CourseMainTable_Class_code=$P{Class_Code} group by a.CourseMainTable_Class_code;]]>
+	</queryString>
+	<field name="Assessment" class="java.lang.String">
+		<fieldDescription><![CDATA[]]></fieldDescription>
+	</field>
+	<field name="Duedate" class="java.lang.String">
+		<fieldDescription><![CDATA[]]></fieldDescription>
+	</field>
+	<field name="Remarks" class="java.lang.String">
+		<fieldDescription><![CDATA[]]></fieldDescription>
+	</field>
+	<background>
+		<band splitType="Stretch"/>
+	</background>
+	<title>
+		<band height="41" splitType="Stretch">
+			<staticText>
+				<reportElement uuid="992c7d55-a4ab-4572-a4db-d78831a1e507" x="0" y="1" width="555" height="38"/>
+				<textElement textAlignment="Center" verticalAlignment="Middle">
+					<font size="16" isBold="true"/>
+				</textElement>
+				<text><![CDATA[MBA Program Course Outline]]></text>
+			</staticText>
+		</band>
+	</title>
+	<detail>
+		<band height="389" splitType="Stretch">
+			<componentElement>
+				<reportElement uuid="cd7e4116-f596-483a-8706-656d10f4f756" x="0" y="0" width="554" height="272"/>
+				<jr:table xmlns:jr="http://jasperreports.sourceforge.net/jasperreports/components" xsi:schemaLocation="http://jasperreports.sourceforge.net/jasperreports/components http://jasperreports.sourceforge.net/xsd/components.xsd">
+					<datasetRun subDataset="Dataset1" uuid="de95ad5b-5dda-443a-ae67-3ef4541f1104">
+						<connectionExpression><![CDATA[$P{REPORT_CONNECTION}]]></connectionExpression>
+					</datasetRun>
+					<jr:column width="90" uuid="2cfc0462-5bda-49b3-9efa-889ce17bd7f5">
+						<jr:columnHeader style="Table_CH" height="20">
+							<staticText>
+								<reportElement uuid="21b68f03-f2f3-4288-9c45-e1cde8644a1f" x="0" y="0" width="90" height="20"/>
+								<textElement textAlignment="Center" verticalAlignment="Middle"/>
+								<text><![CDATA[Assessment]]></text>
+							</staticText>
+						</jr:columnHeader>
+						<jr:detailCell style="Table_TD" height="20">
+							<textField>
+								<reportElement uuid="09a34c61-b195-4c1f-b64f-272825aab5e5" x="0" y="0" width="90" height="20"/>
+								<textElement/>
+								<textFieldExpression><![CDATA[$F{Assessment}]]></textFieldExpression>
+							</textField>
+						</jr:detailCell>
+					</jr:column>
+					<jr:column width="340" uuid="ab869475-2ccb-4884-b3c5-20f7e5cd900d">
+						<jr:columnHeader style="Table_CH" height="20">
+							<staticText>
+								<reportElement uuid="d9999236-3ebe-47be-8e1a-eed45eff4e6f" x="0" y="0" width="340" height="20"/>
+								<textElement textAlignment="Center" verticalAlignment="Middle"/>
+								<text><![CDATA[Assessment]]></text>
+							</staticText>
+						</jr:columnHeader>
+						<jr:detailCell style="Table_TD" height="20">
+							<textField>
+								<reportElement uuid="9f2cbff3-200f-4a0a-9f8c-619bed6b34e8" x="0" y="0" width="340" height="20"/>
+								<textElement/>
+								<textFieldExpression><![CDATA[$F{Duedate}]]></textFieldExpression>
+							</textField>
+						</jr:detailCell>
+					</jr:column>
+					<jr:column width="128" uuid="1b2cfe67-d6c0-432a-96f5-464fdeaf4352">
+						<jr:columnHeader style="Table_CH" height="20">
+							<staticText>
+								<reportElement uuid="fb6bc172-7e75-45b2-9b18-522efc8a3f83" x="0" y="0" width="124" height="20"/>
+								<textElement textAlignment="Center" verticalAlignment="Middle"/>
+								<text><![CDATA[Assessment]]></text>
+							</staticText>
+						</jr:columnHeader>
+						<jr:detailCell style="Table_TD" height="20">
+							<textField>
+								<reportElement uuid="8f10ff08-81b1-4fe4-8f5b-2b60cd80ee81" x="0" y="0" width="124" height="20"/>
+								<textElement/>
+								<textFieldExpression><![CDATA[$F{Remarks}]]></textFieldExpression>
+							</textField>
+						</jr:detailCell>
+					</jr:column>
+				</jr:table>
+			</componentElement>
+		</band>
+	</detail>
+	<summary>
+		<band height="42" splitType="Stretch"/>
+	</summary>
+</jasperReport>

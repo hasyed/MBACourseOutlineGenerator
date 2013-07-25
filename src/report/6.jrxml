@@ -1,0 +1,266 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<!-- Created with Jaspersoft Studio version last-->
+<jasperReport xmlns="http://jasperreports.sourceforge.net/jasperreports" xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance" xsi:schemaLocation="http://jasperreports.sourceforge.net/jasperreports http://jasperreports.sourceforge.net/xsd/jasperreport.xsd" name="Blank A4" language="groovy" pageWidth="595" pageHeight="842" columnWidth="555" leftMargin="20" rightMargin="20" topMargin="20" bottomMargin="20" uuid="e768db32-8754-41cf-81a4-67d2e1ebccb4">
+	<property name="com.jaspersoft.studio.data.defaultdataadapter" value="firstTry"/>
+	<parameter name="Class_Code" class="java.lang.Integer"/>
+	<queryString>
+		<![CDATA[SELECT m.Class_code,Classtimings,Room,SessionDays, m.CourseName,Teacher_Instructor,c.ClassType, c.CreditHours,c.CoursePrerequisite,t.ConsultationTime,t.Email,t.Contact,o.CourseDescription,o.CourseObjective, o.TeachingAndLearningMethodology,o.TextBookAndPreCourseReading,o.PrerequisiteSkilleAndKnowledge FROM coursemaintable AS m,course AS c,teacher as t,courseothertable as o where m.Class_Code=$P{Class_Code} and m.CourseName=c.CourseName and t.Instructor=m.Teacher_Instructor and m.Class_Code=o.CourseMainTable_Class_code; ;]]>
+	</queryString>
+	<field name="Class_code" class="java.lang.Integer">
+		<fieldDescription><![CDATA[]]></fieldDescription>
+	</field>
+	<field name="Classtimings" class="java.lang.String">
+		<fieldDescription><![CDATA[]]></fieldDescription>
+	</field>
+	<field name="Room" class="java.lang.Integer">
+		<fieldDescription><![CDATA[]]></fieldDescription>
+	</field>
+	<field name="SessionDays" class="java.lang.String">
+		<fieldDescription><![CDATA[]]></fieldDescription>
+	</field>
+	<field name="CourseName" class="java.lang.String">
+		<fieldDescription><![CDATA[]]></fieldDescription>
+	</field>
+	<field name="Teacher_Instructor" class="java.lang.String">
+		<fieldDescription><![CDATA[]]></fieldDescription>
+	</field>
+	<field name="ClassType" class="java.lang.String">
+		<fieldDescription><![CDATA[]]></fieldDescription>
+	</field>
+	<field name="CreditHours" class="java.lang.Integer">
+		<fieldDescription><![CDATA[]]></fieldDescription>
+	</field>
+	<field name="CoursePrerequisite" class="java.lang.String">
+		<fieldDescription><![CDATA[]]></fieldDescription>
+	</field>
+	<field name="CourseDescription" class="java.lang.String">
+		<fieldDescription><![CDATA[]]></fieldDescription>
+	</field>
+	<field name="CourseObjective" class="java.lang.String">
+		<fieldDescription><![CDATA[]]></fieldDescription>
+	</field>
+	<field name="TeachingAndLearningMethodology" class="java.lang.String">
+		<fieldDescription><![CDATA[]]></fieldDescription>
+	</field>
+	<field name="TextBookAndPreCourseReading" class="java.lang.String">
+		<fieldDescription><![CDATA[]]></fieldDescription>
+	</field>
+	<field name="PrerequisiteSkilleAndKnowledge" class="java.lang.String">
+		<fieldDescription><![CDATA[]]></fieldDescription>
+	</field>
+	<field name="ConsultationTime" class="java.lang.String">
+		<fieldDescription><![CDATA[]]></fieldDescription>
+	</field>
+	<field name="Email" class="java.lang.String">
+		<fieldDescription><![CDATA[]]></fieldDescription>
+	</field>
+	<field name="Contact" class="java.lang.Integer">
+		<fieldDescription><![CDATA[]]></fieldDescription>
+	</field>
+	<group name="Outcomes_ID"/>
+	<background>
+		<band splitType="Stretch"/>
+	</background>
+	<title>
+		<band height="22" splitType="Stretch">
+			<staticText>
+				<reportElement uuid="9a9d4dbd-c97f-4d2f-907b-666b88ddea9e" x="-1" y="-20" width="555" height="38"/>
+				<textElement textAlignment="Center" verticalAlignment="Middle">
+					<font size="16" isBold="true"/>
+				</textElement>
+				<text><![CDATA[MBA Program Course Outline]]></text>
+			</staticText>
+		</band>
+	</title>
+	<pageHeader>
+		<band height="80" splitType="Stretch">
+			<staticText>
+				<reportElement uuid="38404909-3548-47a6-abdf-865eb89ab917" x="0" y="0" width="70" height="20"/>
+				<textElement/>
+				<text><![CDATA[Class Code:]]></text>
+			</staticText>
+			<textField>
+				<reportElement uuid="a9106d52-8123-4441-bb76-b2274653890d" x="130" y="-2" width="70" height="22"/>
+				<textElement/>
+				<textFieldExpression><![CDATA[$F{Class_code}]]></textFieldExpression>
+			</textField>
+			<staticText>
+				<reportElement uuid="e8abfc78-afd4-4ada-9cea-eec284f8bd48" x="0" y="20" width="70" height="20"/>
+				<textElement/>
+				<text><![CDATA[Course Name:]]></text>
+			</staticText>
+			<textField>
+				<reportElement uuid="e33260d3-d1fd-489d-8bfc-a4a7a75e30b1" x="130" y="20" width="70" height="20"/>
+				<textElement/>
+				<textFieldExpression><![CDATA[$F{CourseName}]]></textFieldExpression>
+			</textField>
+			<textField>
+				<reportElement uuid="9190c788-7c9f-406b-99d9-0219dbf6a641" x="130" y="40" width="70" height="20"/>
+				<textElement/>
+				<textFieldExpression><![CDATA[$F{ClassType}]]></textFieldExpression>
+			</textField>
+			<staticText>
+				<reportElement uuid="340815f2-4913-4e5f-9ec4-b8230cc91fbd" x="0" y="40" width="70" height="20"/>
+				<textElement/>
+				<text><![CDATA[Class Type]]></text>
+			</staticText>
+			<textField>
+				<reportElement uuid="8a0a898b-1a6b-49d2-9fb1-6f8fe84d5e8a" x="130" y="60" width="80" height="20"/>
+				<textElement/>
+				<textFieldExpression><![CDATA[$F{Teacher_Instructor}]]></textFieldExpression>
+			</textField>
+			<staticText>
+				<reportElement uuid="6ae571f8-8560-48d7-854e-14d09f7e773d" x="0" y="60" width="70" height="20"/>
+				<textElement/>
+				<text><![CDATA[Instructor:]]></text>
+			</staticText>
+		</band>
+	</pageHeader>
+	<columnHeader>
+		<band height="165" splitType="Stretch">
+			<staticText>
+				<reportElement uuid="b9fcb024-0aae-4469-9779-16ed43404e0f" x="0" y="40" width="110" height="20"/>
+				<textElement/>
+				<text><![CDATA[Session Days]]></text>
+			</staticText>
+			<staticText>
+				<reportElement uuid="2e9d7c09-89b5-4a97-b1eb-2bc6114d3b8c" x="0" y="20" width="110" height="20"/>
+				<textElement/>
+				<text><![CDATA[Class Timing and Room]]></text>
+			</staticText>
+			<staticText>
+				<reportElement uuid="6432bffe-2b94-4d0c-98cf-cb0dc0829d73" x="0" y="60" width="70" height="20"/>
+				<textElement/>
+				<text><![CDATA[Credit Hours]]></text>
+			</staticText>
+			<staticText>
+				<reportElement uuid="f3bfc6ea-d510-4892-9d27-999597a24100" x="0" y="100" width="100" height="20"/>
+				<textElement/>
+				<text><![CDATA[Consultation Time]]></text>
+			</staticText>
+			<staticText>
+				<reportElement uuid="c3452633-0d5f-435b-b1f7-9288ccb741cf" x="0" y="80" width="100" height="20"/>
+				<textElement/>
+				<text><![CDATA[Course Prerequisites:]]></text>
+			</staticText>
+			<staticText>
+				<reportElement uuid="f4ea2cdf-ff5f-4427-b9a2-f2d234f6f04b" x="0" y="120" width="70" height="20"/>
+				<textElement/>
+				<text><![CDATA[Email]]></text>
+			</staticText>
+			<staticText>
+				<reportElement uuid="8276b057-3152-4933-80a3-4e3e4c69ee79" x="0" y="140" width="70" height="20"/>
+				<textElement/>
+				<text><![CDATA[Contact #]]></text>
+			</staticText>
+			<staticText>
+				<reportElement uuid="ee818d81-d3bc-4b13-ab8e-470eee5140aa" x="-1" y="0" width="554" height="20"/>
+				<textElement textAlignment="Center" verticalAlignment="Middle">
+					<font size="14" isBold="true"/>
+				</textElement>
+				<text><![CDATA[Course Details]]></text>
+			</staticText>
+			<textField>
+				<reportElement uuid="789e117d-7771-4598-8bce-1fe2ed2f1848" x="130" y="20" width="50" height="22"/>
+				<textElement/>
+				<textFieldExpression><![CDATA[$F{Classtimings}]]></textFieldExpression>
+			</textField>
+			<textField>
+				<reportElement uuid="43bd73e6-d592-4605-b6f6-805b5979be85" x="130" y="80" width="70" height="20"/>
+				<textElement/>
+				<textFieldExpression><![CDATA[$F{CoursePrerequisite}]]></textFieldExpression>
+			</textField>
+			<textField>
+				<reportElement uuid="3610e8d4-56ac-4e32-aabb-a49e51782939" x="130" y="40" width="70" height="20"/>
+				<textElement/>
+				<textFieldExpression><![CDATA[$F{SessionDays}]]></textFieldExpression>
+			</textField>
+			<textField>
+				<reportElement uuid="1924756d-86df-4e8e-b3ca-f2c78006334f" x="130" y="60" width="70" height="20"/>
+				<textElement/>
+				<textFieldExpression><![CDATA[$F{CreditHours}]]></textFieldExpression>
+			</textField>
+			<textField>
+				<reportElement uuid="b6697fb7-543b-4c75-98be-987a91ff7bde" x="130" y="122" width="70" height="20"/>
+				<textElement/>
+				<textFieldExpression><![CDATA[$F{Email}]]></textFieldExpression>
+			</textField>
+			<textField>
+				<reportElement uuid="89262e24-c239-4a59-bde4-8e301d522d7f" x="130" y="142" width="70" height="20"/>
+				<textElement/>
+				<textFieldExpression><![CDATA[$F{Contact}]]></textFieldExpression>
+			</textField>
+			<textField>
+				<reportElement uuid="54c6564a-6d30-45a1-91a3-f808811ecc51" x="130" y="100" width="70" height="22"/>
+				<textElement/>
+				<textFieldExpression><![CDATA[$F{ConsultationTime}]]></textFieldExpression>
+			</textField>
+			<textField>
+				<reportElement uuid="bbf173d3-1830-4d70-bf10-03e4156bd235" x="180" y="20" width="50" height="20"/>
+				<textElement/>
+				<textFieldExpression><![CDATA[$F{Room}]]></textFieldExpression>
+			</textField>
+		</band>
+	</columnHeader>
+	<detail>
+		<band height="475" splitType="Stretch">
+			<staticText>
+				<reportElement uuid="53301674-df50-4c30-8fd7-beb5c988de18" x="0" y="0" width="554" height="20"/>
+				<textElement textAlignment="Center" verticalAlignment="Middle">
+					<font size="14" isBold="true"/>
+				</textElement>
+				<text><![CDATA[Course Description]]></text>
+			</staticText>
+			<textField>
+				<reportElement uuid="a54bf7c6-8aec-4ee7-9b47-7cdb0db65d34" x="0" y="20" width="555" height="80"/>
+				<textElement/>
+				<textFieldExpression><![CDATA[$F{CourseDescription}]]></textFieldExpression>
+			</textField>
+			<textField>
+				<reportElement uuid="3656e868-18a6-42e6-8740-73800e004a01" x="0" y="120" width="555" height="80"/>
+				<textElement/>
+				<textFieldExpression><![CDATA[$F{CourseObjective}]]></textFieldExpression>
+			</textField>
+			<staticText>
+				<reportElement uuid="485da12f-37f0-4fc7-9520-3dc0c8096273" x="0" y="100" width="554" height="20"/>
+				<textElement textAlignment="Center" verticalAlignment="Middle">
+					<font size="14" isBold="true"/>
+				</textElement>
+				<text><![CDATA[Course Objective]]></text>
+			</staticText>
+			<textField>
+				<reportElement uuid="07f21a98-06f5-4da0-9a02-f39b4af27af6" x="0" y="220" width="555" height="80"/>
+				<textElement/>
+				<textFieldExpression><![CDATA[$F{CourseObjective}]]></textFieldExpression>
+			</textField>
+			<staticText>
+				<reportElement uuid="c5d229ad-27d2-4d0e-b68b-e47f16866a4a" x="0" y="200" width="554" height="20"/>
+				<textElement textAlignment="Center" verticalAlignment="Middle">
+					<font size="14" isBold="true"/>
+				</textElement>
+				<text><![CDATA[Course Learning Outcomes]]></text>
+			</staticText>
+			<textField>
+				<reportElement uuid="638c9487-67be-405b-86a4-051bda63dc3d" x="0" y="320" width="555" height="80"/>
+				<textElement/>
+				<textFieldExpression><![CDATA[$F{TeachingAndLearningMethodology}]]></textFieldExpression>
+			</textField>
+			<staticText>
+				<reportElement uuid="9739d808-8d53-47f3-93db-2ec9a38c11ea" x="1" y="300" width="554" height="20"/>
+				<textElement textAlignment="Center" verticalAlignment="Middle">
+					<font size="14" isBold="true"/>
+				</textElement>
+				<text><![CDATA[Teaching and Learning Methodlogy]]></text>
+			</staticText>
+		</band>
+	</detail>
+	<columnFooter>
+		<band height="9" splitType="Stretch"/>
+	</columnFooter>
+	<pageFooter>
+		<band height="12" splitType="Stretch"/>
+	</pageFooter>
+	<summary>
+		<band height="9" splitType="Stretch"/>
+	</summary>
+</jasperReport>
